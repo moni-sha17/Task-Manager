@@ -1,0 +1,116 @@
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #b794f4, #81e6d9);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container {
+    width: 380px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(15px);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    text-align: center;
+    color: #2d3748;
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+
+.input-area {
+    display: flex;
+    gap: 10px;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: #edf2f7;
+    font-size: 15px;
+    transition: 0.3s ease;
+}
+
+#taskInput:focus {
+    background: #fff;
+    box-shadow: 0 0 8px rgba(118, 75, 162, 0.4);
+}
+
+#addBtn {
+    background: #6a5acd;
+    border: none;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+#addBtn:hover {
+    background: #4c3bb3;
+    transform: scale(1.05);
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+li {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #2d3748;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+
+.completed {
+    text-decoration: line-through;
+    color: #718096;
+    opacity: 0.7;
+}
+
+
+.deleteBtn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.2s;
+}
+
+.deleteBtn:hover {
+    transform: scale(1.2);
+}
